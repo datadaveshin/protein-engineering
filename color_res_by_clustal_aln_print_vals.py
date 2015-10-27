@@ -3,12 +3,7 @@ import color_by_score as col
 def seq_list_from_file(name_of_file):
     """ 
     Read in the contents of the alignment file line by line.
-    (Proper way to open and read each line found here:
-    http://stackoverflow.com/questions/8009882/
-    how-to-read-large-file-line-by-line-in-python)
-
     Remove the first few lines.
-
     Make a dictionary from the remaining. 
     """
     with open(name_of_file) as f:
