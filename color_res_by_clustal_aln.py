@@ -3,12 +3,7 @@ import color_by_score as col
 def seq_list_from_file(name_of_file):
     """ 
     Read in the contents of the alignment file line by line.
-    (Proper way to open and read each line found here:
-    http://stackoverflow.com/questions/8009882/
-    how-to-read-large-file-line-by-line-in-python)
-
     Remove the first few lines.
-
     Make a dictionary from the remaining. 
     """
     with open(name_of_file) as f:
@@ -87,7 +82,6 @@ def color_res_by_clustal_aln(clustal_alignment):
 list_of_sequences = seq_list_from_file("pepck-fasta_90-40-115-85.aln")
 
 #test_seq_lengths(list_of_sequences)
-
 conservation_list = calc_conservation(list_of_sequences)
 output_color_commands(conservation_list)
 
