@@ -14,18 +14,16 @@ def color_by_score(res_num, score):
     return_rgb(res_num, score)
     select_and_color(res_num)
 
-"""
-tests
-"""
-return_rgb("test_green", 0) # should return green
-return_rgb("test_yellow", 0.5) # should return yellow
-return_rgb("test_red", 1) # should return red
+# return_rgb("test_green", 0) # should return green
+# return_rgb("test_yellow", 0.5) # should return yellow
+# return_rgb("test_red", 1) # should return red
 
-print colorsys.hsv_to_rgb(0, 1.0, 1.0)
-print colorsys.hsv_to_rgb(120, 1.0, 1.0)
-print colorsys.hsv_to_rgb(359.0, 1.0, 1.0)
+# print colorsys.hsv_to_rgb(0, 1.0, 1.0)
+# print colorsys.hsv_to_rgb(120, 1.0, 1.0)
+# print colorsys.hsv_to_rgb(359.0, 1.0, 1.0)
 
-# color_by_score(6, 0.0)
+def test_answer():
+    assert color_by_score(6, 0.0) == "set_color color_6 , [0.0, 0.40000000000000036, 1.0]\nselect res_6 , resi 6\ncolor color_6 , res_6"
 # color_by_score(7, 0.1)
 # color_by_score(8, 0.2)
 # color_by_score(9, 0.3)
